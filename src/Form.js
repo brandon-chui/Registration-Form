@@ -1,4 +1,5 @@
 import React from 'react';
+// custom react hook
 import useForm from './useForm';
 import MaskedInput from 'react-text-mask';
 import validateForm from './validateForm';
@@ -8,8 +9,10 @@ const Form = () => {
 
     const { handleChange, handleSubmit, values, errors } = useForm(submit, validateForm);
 
+    // used to prevent 5 number year date in date of birth field
     const today = new Date().toISOString().split('T')[0];
 
+    // you can go to webhook.site and change the fetch url to post to a new api to see the posted data
     async function submit() {
         console.log("submitted");
         try {
