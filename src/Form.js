@@ -12,6 +12,20 @@ const Form = () => {
     // used to prevent 5 number year date in date of birth field
     const today = new Date().toISOString().split('T')[0];
 
+    // const inputRef = useRef();
+    // const firstNameRef = useRef(null);
+    // const lastNameRef = useRef(null);
+
+    // useEffect(() => {
+    //     firstNameRef.current.focus()
+    // }, [])
+
+    // const firstKeyDown = (e) => {
+    //     if (e.key === "Enter") {
+    //         lastNameRef.current.focus()
+    //     }
+    // }
+
     // you can go to webhook.site and change the fetch url to post to a new api to see the posted data
     async function submit() {
         console.log("submitted");
@@ -50,7 +64,8 @@ const Form = () => {
                                 type="text" 
                                 placeholder="First"
                                 value={values.firstName} 
-                                onChange={handleChange}>
+                                onChange={handleChange}
+                                >
                             </input>
                             {errors.firstName && <p className='error'>{errors.firstName}</p>}
                         </div>
@@ -132,11 +147,17 @@ const Form = () => {
                     </input>
                     {errors.password && <p className='error'>{errors.password}</p>}
                 </section>
-                <button type="submit">Submit</button>
+                <button>Submit</button>
                 <p className="tos">By clicking "Submit" you post to an API <br /> that doesn't really do anything with the data.</p>
             </form>
         </div>
     );
 }
+
+/* <br />
+<button onClick={() => {
+    console.log(inputRef.current.value)
+    inputRef.current.focus();
+}}>Focus</button> */
 
 export default Form;
