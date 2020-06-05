@@ -12,6 +12,11 @@ const Form = () => {
     // used to prevent 5 number year date in date of birth field
     const today = new Date().toISOString().split('T')[0];
 
+    // redirect to new page
+    // const [newPage, setNewPage] = useState(false)
+    // {newPage ? <Redirect to="/" /> ? null}
+    // in submit() if successful, setNewPage(true)
+
     // const inputRef = useRef();
     // const firstNameRef = useRef(null);
     // const lastNameRef = useRef(null);
@@ -25,6 +30,8 @@ const Form = () => {
     //         lastNameRef.current.focus()
     //     }
     // }
+
+    // https://24qjl573xh.execute-api.us-west-2.amazonaws.com/default/MockUserData
 
     // you can go to webhook.site and change the fetch url to post to a new api to see the posted data
     async function submit() {

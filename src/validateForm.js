@@ -32,6 +32,7 @@ export default function validateForm(values) {
         errors.password = "Please enter a password";
     } else if (values.password.length < 7) {
         errors.password = "Password must be at least 7 characters";
+        // can add separate object errors.passwordOBject = {} for other checks
     }
 
     return errors;
